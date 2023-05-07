@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name add gtest
+    - name: Adding gtest
       run: git clone https://github.com/google/googletest.git third-party/gtest -b release-1.11.0
 
     - name: Install lcov
