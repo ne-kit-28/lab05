@@ -96,4 +96,8 @@ cd ..
 mkdir coverage
 cd coverage
 touch temp.txt
+cd ..
+git status
+git add .
+git commit -m "Lab has been planted"
 
