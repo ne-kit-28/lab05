@@ -21,7 +21,7 @@ TEST(Transaction, Banking){
 	Alice.Lock();
 	ASSERT_THROW(test_tran.Make(Alice, Bob, 1000), std::runtime_error);
 	Alice.Unlock();
-//проверяем что если входные параметры правильные, то транзакция проходит православно
+//проверяем что если входные параметры правильные, то транзакция проходит правильно
 	ASSERT_EQ(test_tran.Make(Alice, Bob, 1000), true);
 	ASSERT_EQ(Bob.GetBalance(), base_B+1000);
 	ASSERT_EQ(Alice.GetBalance(), base_A-1000-base_fee);
